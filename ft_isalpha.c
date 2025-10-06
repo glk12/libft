@@ -33,4 +33,4 @@ int	main()
 		write(1,"FAILED\n",7);
 
 
-}
+}*/

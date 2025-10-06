@@ -3,7 +3,7 @@
 
 #include <unistd.h>
 #include <stdlib.h>
-#include <stddef.h>
+#include <string.h>
 
 size_t	ft_strlen(const char *s);
 

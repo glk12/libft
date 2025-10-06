@@ -1,4 +1,5 @@
-#include <string.h>
+#include <libft.h>
+
 void	*ft_memset(void *ptr, int value, size_t len)
 {
 	unsigned char *p = (unsigned char *)ptr;
