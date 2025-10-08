@@ -2,7 +2,7 @@
 
 int	ft_isdigit(int c)
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	return (c >= '0' && c <= '9');
 }
 
 #include <ctype.h>
@@ -28,8 +28,8 @@ int	main()
 	else
 		write(1,"FAILED\n",7);
 	if (isdigit(c4) == ft_isdigit(c4))
-		write(1,"PASSED",7);
+		write(1,"PASSED",6);
 	else
-		write(1,"FAILED",7);
+		write(1,"FAILED",6);
 }
 
