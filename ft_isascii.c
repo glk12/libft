@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/09 20:37:25 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/09 20:42:41 by glopes-a         ###   ########.fr       */
+/*   Created: 2025/10/09 15:02:40 by glopes-a          #+#    #+#             */
+/*   Updated: 2025/10/09 15:02:50 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void	*ft_memset(void *ptr, int value, size_t len)
+int	ft_isascii(int c)
 {
-	unsigned char *p;
-	p = ptr;
-
-	while(len--)
-		*p++ = (unsigned char)value;
-	return ptr;
+	return(c >= 0 && c <= 127);
 }
 /*
+#include <ctype.h>
 #include <stdio.h>
-int main()
+
+int     main()
 {
-	int arr[6] ={4,5,6};
+        char chars[] = {'a','V','7',255};
 
-	ft_memset(arr,'A', sizeof(arr));
-
-	for(int i = 0;i<6;i++)
-		printf("%d", arr[i]);
+        for(int i = 0; i <= 3; i++)
+                printf("isascii: %d \n ft_isacii: %d\n",isascii(chars[i]),ft_isascii(chars[i]));
 }
 */

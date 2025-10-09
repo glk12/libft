@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/09 20:37:25 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/09 20:42:41 by glopes-a         ###   ########.fr       */
+/*   Created: 2025/10/09 20:31:29 by glopes-a          #+#    #+#             */
+/*   Updated: 2025/10/09 20:32:54 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void	*ft_memset(void *ptr, int value, size_t len)
+void	ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char *p;
-	p = ptr;
+	unsigned char *d;
+	const unsigned char *s;
 
-	while(len--)
-		*p++ = (unsigned char)value;
-	return ptr;
+	d = dest;
+	s = src;
+	while(n--)
+		*d++ = *s++;
 }
 /*
 #include <stdio.h>
-int main()
+int	main()
 {
-	int arr[6] ={4,5,6};
+	char *src = "Hello";
+	char dest[] = "World World";
 
-	ft_memset(arr,'A', sizeof(arr));
-
-	for(int i = 0;i<6;i++)
-		printf("%d", arr[i]);
+	ft_memcpy(dest,src,5);
+		printf("%s", dest);
 }
 */

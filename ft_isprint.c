@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/09 20:37:25 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/09 20:42:41 by glopes-a         ###   ########.fr       */
+/*   Created: 2025/10/09 20:33:03 by glopes-a          #+#    #+#             */
+/*   Updated: 2025/10/09 20:33:14 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void	*ft_memset(void *ptr, int value, size_t len)
+int	ft_isprint(int c)
 {
-	unsigned char *p;
-	p = ptr;
-
-	while(len--)
-		*p++ = (unsigned char)value;
-	return ptr;
+	return (c >= 32 && c <= 126);
 }
 /*
+#include <ctype.h>
 #include <stdio.h>
-int main()
+int	main()
 {
-	int arr[6] ={4,5,6};
+	char chars[] = {'a','V','7',127};
 
-	ft_memset(arr,'A', sizeof(arr));
-
-	for(int i = 0;i<6;i++)
-		printf("%d", arr[i]);
+	for(int i = 0; i <= 3; i++)
+		printf("isprint: %d \n ft_isprint: %d\n",isprint(chars[i]),ft_isprint(chars[i]));
 }
 */
