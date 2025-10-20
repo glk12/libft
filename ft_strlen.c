@@ -6,7 +6,7 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 20:42:52 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/09 20:42:53 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/20 17:41:37 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@ size_t	ft_strlen(const char *s)
 	size_t	n;
 
 	n = 0;
-
 	while(*s++)
 		n++;
-
 	return (n);
 }
 /*

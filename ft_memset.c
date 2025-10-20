@@ -6,7 +6,7 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 20:37:25 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/09 20:42:41 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/20 17:01:54 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *ptr, int value, size_t len)
 
 	while(len--)
 		*p++ = (unsigned char)value;
-	return ptr;
+	return (ptr);
 }
 /*
 #include <stdio.h>

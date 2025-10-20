@@ -1,5 +1,8 @@
 #include "libft.h"
-void  ft_memmove(void *dest, const void *src, size_t n)
+
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	const unsigned char *s;
 	unsigned char *d;
@@ -12,28 +15,28 @@ void  ft_memmove(void *dest, const void *src, size_t n)
 	s = (const unsigned char *)src;
 	d = (unsigned char *)dest;
 
-4 if (d > s && d < n + s)
-  {
-    while (n--)
-      d[n] = s[n];
-  }
+	if (d > s && d < n + s)
+	{
+	while (n--)
+		d[n] = s[n];
+	}
 	else
-  {
-    ft_memcpy(dest, src, n);
-  }
+	{
+		ft_memcpy(dest, src, n);
+	}
   return (dest);
 }
-
+/*
 #include <stdio.h>
 int main()
 {
     int src[4] = {5,4,3,2};
     int dest[4];
 
-    ft_memmove(dest,src,sizeof *src);
-    for (int i = 0;i < 4; i++)
-    {
-      printf("%d", dest[i]);
-    }
+    if(ft_memmove(dest,src,sizeof *src) == memmove(dest, src, sizeof *src))
+		printf("%s","PASSED");
+	else
+		printf("%s", "FAILED");
+    
     return(0);
-}
+}*/
