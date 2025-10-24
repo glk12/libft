@@ -6,7 +6,7 @@
 /*   By: glopes-a <glopes-a@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 18:00:46 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/20 18:49:43 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/24 11:50:25 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,28 +26,16 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 	s_len = ft_strlen(src);
 	if (d_len == n)
 		return (n + s_len);
-	if (n > d_len + s_len)
+	i = 0;
+	while (src[i] && i <= n - d_len - 1)
 	{
-		i = 0;
-		while (src[i])
-		{
-			dest[d_len + i] = src[i];
-			i++;
-		}
-		dest[d_len + i] = '\0';
+		dest[d_len + i] = src[i];
+		i++;
 	}
-	else
-	{
-		i = 0;
-		while (i < n - d_len - 1 && src[i])
-		{
-			dest[d_len + i] = src[i];
-			i++;
-		}
-		dest[d_len + i] = '\0';
-	}
+	dest[d_len + i] = '\0';
 	return (d_len + s_len);
 }
+/*
 #include <stdio.h>
 
 int	main()
@@ -58,3 +46,4 @@ int	main()
 	ft_strlcat(buf,src,n);
 	printf("%s",buf);
 }
+*/

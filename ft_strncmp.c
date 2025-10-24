@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 13:28:04 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/22 13:32:07 by glopes-a         ###   ########.fr       */
+/*   Created: 2025/10/23 12:16:47 by glopes-a          #+#    #+#             */
+/*   Updated: 2025/10/23 12:37:42 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-int	ft_toupper(char c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	if (c >= 'a' && c <= 'z')
-		c -= 32;
-	return (c);
+	if (n == 0)
+		return (0);
+	while (n-- && *s1 && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
+	return (*s1 - *s2);
 }
-
-int main(int argc, char **argv)
+/*
+#include <stdio.h>
+#include <string.h>
+int	main(int argc , char **argv)
 {
+	size_t	n = 3;
 	(void)argc;
-	char x = ft_toupper(argc[1][0]);
-	write(1,&x,1);
-	return (0);
+	printf("%s","MINE: ");
+	printf("%d\n", ft_strncmp(argv[1],argv[2],n));
+	printf("%s","EXPECTED: ");
+	printf("%d", strncmp(argv[1],argv[2],n));
 }
+*/	

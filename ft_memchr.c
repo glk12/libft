@@ -1,31 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/09 15:02:40 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/24 11:11:59 by glopes-a         ###   ########.fr       */
+/*   Created: 2025/10/23 18:14:06 by glopes-a          #+#    #+#             */
+/*   Updated: 2025/10/24 11:24:50 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	return (c >= 0 && c <= 127);
+	size_t			i;
+	unsigned char	*s1;
+
+	s1 = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		if (s1[i] == (unsigned char) c)
+			return ((void *)&s1[i]);
+		i++;
+	}
+	return (NULL);
 }
 /*
-#include <ctype.h>
 #include <stdio.h>
 
-int     main()
+int main(void)
 {
-        char chars[] = {'a','V','7',255};
+    char str[] = "Exemplo de teste";
+    char *res = ft_memchr(str, 't', 15);
 
-        for(int i = 0; i <= 3; i++)
-                printf("isascii: %d \n ft_isacii: %d\n",
-isascii(chars[i]),ft_isascii(chars[i]));
+    if (res)
+        printf("Encontrado: %s\n", res);
+    else
+        printf("Caractere não encontrado.\n");
+
+    return 0;
 }
 */

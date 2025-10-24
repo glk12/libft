@@ -6,18 +6,18 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 20:37:25 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/20 17:01:54 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/24 12:38:12 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	*ft_memset(void *ptr, int value, size_t len)
 {
-	unsigned char *p;
-	p = ptr;
+	unsigned char	*p;
 
-	while(len--)
+	p = ptr;
+	while (len--)
 		*p++ = (unsigned char)value;
 	return (ptr);
 }

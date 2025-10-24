@@ -1,31 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/09 15:02:40 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/24 11:11:59 by glopes-a         ###   ########.fr       */
+/*   Created: 2025/10/22 17:00:56 by glopes-a          #+#    #+#             */
+/*   Updated: 2025/10/24 11:13:46 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	return (c >= 0 && c <= 127);
+	char	*last;
+
+	last = (char *) NULL;
+	while (*s)
+	{
+		if (*s == (char)c)
+			last = (char *)s;
+		s++;
+	}
+	if ((char)c == '\0')
+		return ((char *)s);
+	return (last);
 }
 /*
-#include <ctype.h>
-#include <stdio.h>
-
-int     main()
+int	main()
 {
-        char chars[] = {'a','V','7',255};
-
-        for(int i = 0; i <= 3; i++)
-                printf("isascii: %d \n ft_isacii: %d\n",
-isascii(chars[i]),ft_isascii(chars[i]));
+	char *s = "Hello";
+	char *c = ft_strrchr(s,'l');
+	
+	while (*c)
+	{
+		write(1,c,1);
+		c++;
+	}
 }
 */

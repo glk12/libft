@@ -6,15 +6,15 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 20:36:23 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/09 20:36:28 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/24 11:52:20 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int	c)
+int	ft_isalpha(int c)
 {
-	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
 /*
 #include <ctype.h>
@@ -45,4 +45,5 @@ int	main()
 		write(1,"FAILED\n",7);
 
 
-}*/
+}
+*/

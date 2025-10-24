@@ -6,7 +6,7 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 15:09:02 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/18 15:25:03 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/24 11:17:11 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	len;
-		
+
 	len = ft_strlen(src);
 	if (size == 0)
 		return (len);
