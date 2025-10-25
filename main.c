@@ -6,7 +6,7 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 20:50:00 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/25 12:58:17 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/25 15:12:14 by gustavo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -233,9 +233,11 @@ int	main(void)
 		printf(RED "3- FAILED\n" RESET);
 
 
-	printf(BLUE,"ft_strtrim");
+	printf(BLUE "ft_strtrim: " RESET);
 	char *test = "test";
-	strtrim(test,"e");
-	printf(strtrim);
+	if(strcmp(ft_strtrim(test,"t"),"es") == 0)
+		printf(GREEN"1- PASSED\n" RESET);
+	else
+		printf(RED "1- FAILED\n" RESET);
 	return (0);
 }
