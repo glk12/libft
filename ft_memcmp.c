@@ -6,7 +6,7 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:36:38 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/24 11:28:59 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/25 10:47:49 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,30 +31,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-int main(void)
-{
-    char a[] = "abcdef";
-    char b[] = "abcdeg";
-    char c[] = "abcdef";
 
-    // Teste 1:
-    printf("Teste 1:\n");
-    printf("Original: %d\n", memcmp(b, a, 6));
-    printf("ft_memcmp: %d\n\n", ft_memcmp(b, a, 6));
-
-    // Teste 2: 
-    printf("Teste 2:\n");
-    printf("Original: %d\n", memcmp(a, c, 6));
-    printf("ft_memcmp: %d\n\n", ft_memcmp(a, c, 6));
-
-    // Teste 3: 
-    printf("Teste 3:\n");
-    printf("Original: %d\n", memcmp(a, b, 6));
-    printf("ft_memcmp: %d\n\n", ft_memcmp(a, b, 6));
-
-    return 0;
-}
-*/

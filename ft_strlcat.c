@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: glopes-a <glopes-a@student.42.rio>         +#+  +:+       +#+        */
+/*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 18:00:46 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/24 11:50:25 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/24 20:58:54 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 	if (d_len == n)
 		return (n + s_len);
 	i = 0;
-	while (src[i] && i <= n - d_len - 1)
+	while (src[i] && i < n - d_len - 1)
 	{
 		dest[d_len + i] = src[i];
 		i++;
@@ -39,7 +39,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 #include <stdio.h>
 
 int	main()
-{	
+{
 	char buf[10] = "Hello";
 	const char *src = "World";
 	int n = 10;
