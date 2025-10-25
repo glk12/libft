@@ -6,13 +6,11 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 11:47:39 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/25 12:37:25 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/25 17:56:22 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *s);
 
 static void	ft_concstrs(const char *s1, const char *s2, char *str)
 {
