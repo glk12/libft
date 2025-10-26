@@ -6,7 +6,7 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 20:50:00 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/25 15:12:14 by gustavo          ###   ########.fr       */
+/*   Updated: 2025/10/26 19:47:27 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,29 @@
 #define RED "\033[0;31m"
 #define BLUE "\033[0;34m"
 #define RESET "\033[0m"
+
+void	free_split(char **split)
+{
+	int i = 0;
+	while (split[i])
+		free(split[i++]);
+	free(split);
+}
+
+void	to_upper(unsigned int i, char *c)
+{
+	(void)i;
+	if (*c >= 'a' && *c <= 'z')
+		*c -= 32;
+}
+
+char	my_toupper(unsigned int i, char c)
+{
+	(void)i;
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
+}
 
 int	main(void)
 {
@@ -239,5 +262,65 @@ int	main(void)
 		printf(GREEN"1- PASSED\n" RESET);
 	else
 		printf(RED "1- FAILED\n" RESET);
-	return (0);
+
+
+	printf(BLUE "ft_split: " RESET);
+	char **res1 = ft_split("ola mundo", ' ');
+	if (strcmp(res1[0], "ola") == 0 && strcmp(res1[1], "mundo") == 0 && res1[2] == NULL)
+		printf(GREEN "1- PASSED " RESET);
+	else
+		printf(RED "1- FAILED " RESET);
+	free_split(res1);
+
+
+	char **res2 = ft_split("   ola   amigo  ", ' ');
+	if (strcmp(res2[0], "ola") == 0 && strcmp(res2[1], "amigo") == 0 && res2[2] == NULL)
+		printf(GREEN "2- PASSED\n" RESET);
+	else
+		printf(RED "2- FAILED\n" RESET);
+	free_split(res2);
+
+
+	printf(BLUE "ft_itoa: " RESET);
+	char *sitoa = ft_itoa(42);
+	if (strcmp(sitoa, "42") == 0)
+		printf(GREEN "1- PASSED\n" RESET);
+	else
+		printf(RED "1- FAILED\n" RESET);
+
+	printf(BLUE "ft_strmapi: " RESET);
+	char *map = ft_strmapi("abc", my_toupper);
+	if (strcmp(map, "ABC") == 0)
+		printf(GREEN "1- PASSED\n" RESET);
+	else
+    	printf(RED "1- FAILED\n" RESET);
+	free(map);
+
+
+	printf(BLUE "ft_striteri: " RESET);
+	char str_iter[] = "abc";
+	ft_striteri(str_iter, to_upper);
+	if (strcmp(str_iter, "ABC") == 0)
+		printf(GREEN "1- PASSED\n" RESET);
+	else
+    	printf(RED "1- FAILED\n" RESET);
+
+	printf(BLUE "ft_putchar_fd: " RESET);
+	fflush(stdout);
+	ft_putchar_fd('A', 1);
+
+
+	printf(BLUE "\nft_putstr_fd: " RESET);
+	fflush(stdout);
+	ft_putstr_fd("Test", 1);
+
+
+	printf(BLUE "\nft_putendl_fd: " RESET);
+	fflush(stdout);
+	ft_putendl_fd("Test", 1);
+
+
+	printf(BLUE "ft_putnbr_fd: " RESET);
+	fflush(stdout);
+	ft_putnbr_fd(-42, 1);
 }
