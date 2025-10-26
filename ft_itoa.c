@@ -6,14 +6,14 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 17:21:04 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/26 18:04:34 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/26 20:27:25 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int		count_digits(long n)
+int	count_digits(long n)
 {
 	int		count;
 
@@ -31,6 +31,7 @@ int		count_digits(long n)
 	}
 	return (count);
 }
+
 char	*ft_itoa(int n)
 {
 	char	*str;

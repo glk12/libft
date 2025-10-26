@@ -6,7 +6,7 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 14:19:04 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/26 17:16:10 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/26 20:44:11 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dest, const char *s, size_t n);
 
-int		count_words(const char *s, char c)
+int	count_words(const char *s, char c)
 {
 	int	i;
 	int	start;
@@ -36,7 +36,8 @@ int		count_words(const char *s, char c)
 	}
 	return (words);
 }
-int		word_len(const char *s, char c)
+
+int	word_len(const char *s, char c)
 {
 	int	len;
 
@@ -45,7 +46,15 @@ int		word_len(const char *s, char c)
 		len++;
 	return (len);
 }
-int		fill_list(char **list_words, const char *s, char c)
+
+void	free_list(char **list_words, int j)
+{
+	while (--j >= 0)
+		free(list_words[j]);
+	free(list_words);
+}
+
+void	fill_list(char **list_words, const char *s, char c)
 {
 	int	i;
 	int	len;
@@ -56,28 +65,23 @@ int		fill_list(char **list_words, const char *s, char c)
 	while (s[i])
 	{
 		while (s[i] == c)
-				i++;
+			i++;
 		if (!s[i])
-			break;
+			break ;
 		if (s[i] != c)
 		{
 			len = word_len(&s[i], c);
 			list_words[j] = (char *)malloc(len + 1);
 			if (!list_words[j])
-			{
-				while (--j >= 0)
-					free(list_words[j]);
-				free(list_words);
-				return (-1);
-			}
+				free_list(list_words, j);
 			ft_strlcpy(list_words[j], &s[i], len + 1);
 			i += len;
 			j++;
 		}
 	}
 	list_words[j] = NULL;
-	return (0);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	char	**list_words;
@@ -87,7 +91,6 @@ char	**ft_split(char const *s, char c)
 	list_words = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!list_words)
 		return (NULL);
-	if (fill_list(list_words, s, c) == -1)
-		return (NULL);
+	fill_list(list_words, s, c);
 	return (list_words);
 }

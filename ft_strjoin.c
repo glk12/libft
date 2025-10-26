@@ -6,7 +6,7 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 11:47:39 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/25 17:56:22 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/26 20:19:02 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,6 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	str = (char *)malloc(t_len);
 	if (!str)
 		return (NULL);
-	ft_concstrs(s1 ,s2 ,str);
+	ft_concstrs(s1, s2, str);
 	return (str);
 }

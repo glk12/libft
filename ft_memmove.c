@@ -6,7 +6,7 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 11:14:56 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/25 10:48:02 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/26 20:17:27 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-

@@ -6,7 +6,7 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:36:38 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/25 10:47:49 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/26 20:19:31 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-

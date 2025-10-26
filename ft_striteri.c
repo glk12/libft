@@ -6,7 +6,7 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 19:10:49 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/26 19:14:02 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/26 20:17:08 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	unsigned int	i;
 
 	if (!s)
-		return;
+		return ;
 	i = 0;
 	while (s[i])
 	{

@@ -6,7 +6,7 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 18:42:55 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/26 19:23:38 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/26 20:19:20 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s)
-		return;
+		return ;
 	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
 }

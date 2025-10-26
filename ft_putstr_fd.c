@@ -6,7 +6,7 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 18:28:13 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/26 19:23:37 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/26 20:27:51 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
-		return;
+		return ;
 	while (*s)
 	{
 		write (fd, s, 1);
