@@ -6,13 +6,11 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 14:19:04 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/27 02:12:53 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/28 14:50:43 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlcpy(char *dest, const char *s, size_t n);
 
 int	count_words(const char *s, char c)
 {
@@ -46,7 +44,8 @@ int	word_len(const char *s, char c)
 		len++;
 	return (len);
 }
-void	free_list(char **list_words,int j)
+
+void	free_list(char **list_words, int j)
 {
 	while (--j >= 0)
 		free(list_words[j]);
@@ -80,6 +79,7 @@ void	fill_list(char **list_words, const char *s, char c)
 	}
 	list_words[j] = NULL;
 }
+
 char	**ft_split(char const *s, char c)
 {
 	char	**list_words;

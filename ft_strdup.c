@@ -12,10 +12,6 @@
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s);
-
-void	*ft_memcpy(void *dest, const void *s, size_t n);
-
 char	*ft_strdup(const char *s)
 {
 	size_t	len;

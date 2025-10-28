@@ -38,7 +38,17 @@ SRC = ft_isalpha \
 	ft_putnbr_fd
 SRCS = $(addsuffix .c, $(SRC))
 OBJS = $(SRCS:.c=.o)
-
+BONUS = ft_lstnew_bonus \
+	ft_lstadd_front_bonus \
+	ft_lstsize_bonus \
+	ft_lstlast_bonus \
+	ft_lstadd_back_bonus \
+	ft_lstdelone_bonus \
+	ft_lstclear_bonus \
+	ft_lstiter_bonus \
+	ft_lstmap_bonus
+BONUS_SRCS = $(addsuffix .c, $(BONUS))
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 HEADER = libft.h
 
 all: $(NAME)
@@ -47,10 +57,12 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
+bonus: $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 fclean: clean
 	rm -f $(NAME)
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

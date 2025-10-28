@@ -6,7 +6,7 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 12:08:51 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/26 20:27:36 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/28 14:45:16 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi(const char *ptr)
 {
 	long	val;
-	int			sign;
+	int		sign;
 
 	val = 0;
 	sign = 1;

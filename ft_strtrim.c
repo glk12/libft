@@ -12,12 +12,6 @@
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s);
-
-size_t	ft_strlen(const char *s);
-
-char	*ft_strchr(const char *s, int c);
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	last;

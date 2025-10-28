@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/27 03:02:50 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/27 04:21:32 by glopes-a         ###   ########.fr       */
+/*   Created: 2025/10/27 02:31:47 by glopes-a          #+#    #+#             */
+/*   Updated: 2025/10/27 02:39:14 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*n_lst;
+	t_list	*last;
 
-	if (!f)
+	if (!new)
+		return ;
+	if (!*lst)
 	{
-		while (lst)
-			{
-				del(lst->content);
-				lst = lst->next;
-			}
+		*lst = new;
+		return ;
 	}
-	while (lst)
-	{
-		n_lst = ft_lstnew(f(lst->content));
-		lst = lst->next;
-	}
+	last = ft_lstlast(*lst);
+	last->next = new;
 }
