@@ -6,13 +6,13 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 14:19:04 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/28 14:50:43 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/29 16:07:32 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(const char *s, char c)
+static int	count_words(const char *s, char c)
 {
 	int	i;
 	int	start;
@@ -35,7 +35,7 @@ int	count_words(const char *s, char c)
 	return (words);
 }
 
-int	word_len(const char *s, char c)
+static int	word_len(const char *s, char c)
 {
 	int	len;
 
@@ -45,14 +45,14 @@ int	word_len(const char *s, char c)
 	return (len);
 }
 
-void	free_list(char **list_words, int j)
+static void	free_list(char **list_words, int j)
 {
 	while (--j >= 0)
 		free(list_words[j]);
 	free(list_words);
 }
 
-void	fill_list(char **list_words, const char *s, char c)
+static void	fill_list(char **list_words, const char *s, char c)
 {
 	int	i;
 	int	len;

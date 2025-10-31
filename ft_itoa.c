@@ -6,13 +6,13 @@
 /*   By: glopes-a <glopes-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 17:21:04 by glopes-a          #+#    #+#             */
-/*   Updated: 2025/10/27 02:13:05 by glopes-a         ###   ########.fr       */
+/*   Updated: 2025/10/29 16:07:02 by glopes-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_digits(long n)
+static int	count_digits(long n)
 {
 	int		count;
 
