@@ -24,7 +24,7 @@ int	ft_putnbr_unsigned(unsigned int n)
 		return (write(1, "0", 1));
 	if (num >= 10)
 	{
-		count += ft_putnbr(num / 10);
+		count += ft_putnbr_unsigned(num / 10);
 		num = num % 10;
 	}
 	count++;
