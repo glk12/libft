@@ -1,6 +1,6 @@
 NAME = libft.a
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g3
+CFLAGS = -Wall -Wextra -Werror -g3 -I./includes
 
 SRC = ft_isalpha \
 	ft_isdigit \
@@ -35,8 +35,15 @@ SRC = ft_isalpha \
 	ft_putchar_fd \
 	ft_putstr_fd \
 	ft_putendl_fd \
-	ft_putnbr_fd
-SRCS = $(addsuffix .c, $(SRC))
+	ft_putnbr_fd \
+	ft_printf
+PRINTF_UTILS = ft_printf_utils/ft_putchar \
+	ft_printf_utils/ft_putstr \
+	ft_printf_utils/ft_putnbr \
+	ft_printf_utils/ft_putnbr_unsigned \
+	ft_printf_utils/ft_putptr \
+	ft_printf_utils/ft_puthex
+SRCS = $(addsuffix .c, $(SRC)) $(addsuffix .c, $(PRINTF_UTILS))
 OBJS = $(SRCS:.c=.o)
 BONUS = ft_lstnew_bonus \
 	ft_lstadd_front_bonus \
