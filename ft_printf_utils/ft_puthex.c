@@ -22,7 +22,7 @@ int	ft_puthex(unsigned long n, char c)
 	len = 0;
 	if (c == 'u')
 		base = "0123456789ABCDEF";
-	else if (c == 'l')
+	else
 		base = "0123456789abcdef";
 	if (n == 0)
 		return (ft_putchar('0'));

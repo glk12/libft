@@ -38,7 +38,7 @@ int	ft_printf(const char *s, ...)
 
 	count = 0;
 	va_start(args, s);
-	if (!s || s == 0)
+	if (!s)
 		return (-1);
 	while (*s)
 	{
@@ -57,15 +57,3 @@ int	ft_printf(const char *s, ...)
 	va_end(args);
 	return (count);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	int n = 445;
-
-	printf(" %i", printf("Ola %X", n));
-	printf("\n");
-	ft_printf(" %i", ft_printf("Ola %X", n));
-	return (0);
-}
-*/
